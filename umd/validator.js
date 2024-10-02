@@ -20,13 +20,13 @@
     class Validator {
         static isValidCPF(cpf) {
             if (cpf.length !== 11) return false;
-            // Implementar a lógica de validação real
+            // Lógica de validação do CPF aqui
             return true; // Exemplo: retorna true se for válido
         }
 
         static isValidCNPJ(cnpj) {
             if (cnpj.length !== 14) return false;
-            // Implementar a lógica de validação real
+            // Lógica de validação do CNPJ aqui
             return true; // Exemplo: retorna true se for válido
         }
     }
@@ -34,7 +34,7 @@
     class ValidatorService {
         validate(document) {
             try {
-                const cleanedDocument = document.replace(/[^\d]+/g, ''); // Remove caracteres não numéricos
+                const cleanedDocument = document.replace(/[^\d]+/g, '');
 
                 if (cleanedDocument.length === 11) { // CPF
                     return {
@@ -62,5 +62,5 @@
         }
     }
 
-    return ValidatorService;
+    return ValidatorService; // Retorna a classe como construtor
 }));
